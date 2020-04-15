@@ -1,2 +1,1 @@
-# companys
-new project name
+"# djangobot" 
