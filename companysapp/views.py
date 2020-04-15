@@ -30,7 +30,7 @@ line_bot_api = LineBotApi('1wvrzWVhcC3NtqQmCrim4ja4Jp0AhOq7l+XrdcAkVrAzQNassUG4a
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('e9d9f0bbe0dd52767bb719eccd45f652') #ehappyFunc5
 
-line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='可以開始連結SQL資料庫'))
 
 @csrf_exempt
 @require_POST
@@ -70,7 +70,7 @@ def hello3 (request,username):
 
 def index(request):
                 now=datetime.now()
-                username="daphne lo" 
+                username="Jen-Jen Lin" 
                 return render(request,"hello4.html",locals())
 
 def listone(request): 
