@@ -1,5 +1,5 @@
 from django.contrib import admin
-from companysapp.models import company6666 as company
+from companysapp.models import company
 
 #class companyAdmin(admin.ModelAdmin):
 #    # 第三種方式，加入 ModelAdmin 類別，定義顯示欄位、欄位過濾資料、搜尋和排序
