@@ -28,7 +28,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('1wvrzWVhcC3NtqQmCrim4ja4Jp0AhOq7l+XrdcAkVrAzQNassUG4agDdgMQQV66wQWRvwuxEJqS4AyNF+CrfKgO7QMhbylmeOWaeRKYT70OWTR3gdTPgxROUA/6xx/eUpPFEkcXuuaJsacCgrvg4wAdB04t89/1O/w1cDnyilFU=')
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('e9d9f0bbe0dd52767bb719eccd45f652') #ehappyFunc5
-
+# 必須放上自己的LINE Bot user ID
 line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='可以開始連結Heroku'))
 
 @csrf_exempt
