@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from companysapp.models import company
+from companysapp.models import company6666 as company
 from django.http import HttpResponse
 
 import logging
@@ -75,7 +75,7 @@ def index(request):
 
 def listone(request): 
 	try: 
-		unit = company.objects.get(cName="李采茜") #讀取一筆資料
+		unit = company.objects.get(idno="60273200") #讀取一筆資料
 	except:
   		errormessage = " (讀取錯誤!)"
 	return render(request, "listone.html", locals())
@@ -84,28 +84,3 @@ def listall(request):
 	companys = company.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序
 	return render(request, "listall.html", locals())
 	
-def insert(request):  #新增資料
-    cName = '邱心怡'
-    cSex =  'M'
-    cBirthday =  '1987-12-26'
-    cEmail = 'bear@superstar.com'
-    cPhone =  '0963245612'
-    cAddr =  '台北市信義路18號'
-    unit = company.objects.create(cName=cName, cSex=cSex, cBirthday=cBirthday, cEmail=cEmail,cPhone=cPhone, cAddr=cAddr) 
-    unit.save()  #寫入資料庫
-    companys = company.objects.all().order_by('-id')  #讀取資料表, 依 id 遞減排序
-    return render(request, "listall.html", locals())
-	
-def modify(request):  #刪除資料
-    unit = company.objects.get(cName='邱心怡')
-    unit.cBirthday =  '1986-12-11'
-    unit.cAddr = '台北市信義路234號'
-    unit.save()  #寫入資料庫
-    companys = company.objects.all().order_by('-id')
-    return render(request, "listall.html", locals())
-	
-def delete(request,id=None):  #刪除資料
-    unit = company.objects.get(cName='邱心怡')
-    unit.delete()
-    companys = company.objects.all().order_by('-id')
-    return render(request, "listall.html", locals())
