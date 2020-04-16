@@ -21,4 +21,4 @@ class company(models.Model):
 	stocks = models.IntegerField(null=False)
 	
 	def __str__(self):
-		return self.idno
+		return self.name
