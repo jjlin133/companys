@@ -1,6 +1,6 @@
 from django.db import models
 
-class company(models.Model):
+class company_orig(models.Model):
 	cName = models.CharField(max_length=20, null=False)
 	cSex = models.CharField(max_length=2, default='M', null=False)
 	cBirthday = models.DateField(null=False)
@@ -12,7 +12,7 @@ class company(models.Model):
 		return self.cName
 
 	
-class company6666(models.Model):
+class company(models.Model):
 	idno = models.IntegerField(null=False)
 	index = models.IntegerField(null=False)
 	title = models.TextField(null=False)
