@@ -4,19 +4,19 @@
 		<title>顯示所有資料</title>
 	</head>
 	<body>
-		<h2>顯示 company 資料表所有資料</h2>
+		<h2>顯示 company6666 資料表所有資料</h2>
 		<table border="1" cellpadding="0" cellspacing="0">
-			<th>編號</th><th>姓名</th><th>性別</th><th>生日</th>
-			<th>郵件帳號</th><th>電話</th><th>地址</th>
+			<th>統編</th><th>序號</th><th>職稱</th><th>姓名</th>
+			<th>英文名</th><th>持股數</th>
 			{% for company in companys %}
 				<tr>
-					<td>{{ company.id }} </td>
-					<td>{{ company.cName }} </td>
-					<td>{{ company.cSex}} </td>
-					<td>{{ company.cBirthday }} </td>
-					<td>{{ company.cEmail }} </td>
-					<td>{{ company.cPhone}} </td>
-					<td>{{ company.cAddr }} </td>	
+					<td>{{ company.idno }} </td>
+					<td>{{ company.index }} </td>
+					<td>{{ company.title}} </td>
+					<td>{{ company.name }} </td>
+					<td>{{ company.ename }} </td>
+					<td>{{ company.stocks}} </td>
+
 				</tr>
 			{% endfor %}
 		</table>
