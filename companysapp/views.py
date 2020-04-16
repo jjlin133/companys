@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from companysapp.models import company6666 as company
+from companysapp.models import company
 from django.http import HttpResponse
 
 import logging
@@ -63,8 +63,7 @@ def sayhello (request):
 def hello2 (request,username):
   return HttpResponse("hello "+ username)
 
-def hello3 (request,username):
-          
+def hello3 (request,username):         
                 now=datetime.now()
                 return render(request,"hello3.html",locals())
 
