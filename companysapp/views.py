@@ -81,6 +81,6 @@ def listone(request):
 	return render(request, "listone.html", locals())
 
 def listall(request):  
-	companys = company.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序
+	companys = company.objects.all().order_by('idno')  #讀取資料表, 依 id 遞增排序
 	return render(request, "listall.html", locals())
 	
