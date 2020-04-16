@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from companysapp.models import company6666 as company
+from companysapp.models import company
 from django.http import HttpResponse
 
 import logging
